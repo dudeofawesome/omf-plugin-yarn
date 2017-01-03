@@ -37,7 +37,7 @@ complete -c yarn -f -n "__fish_seen_subcommand_from t check" -a "--integrity" -d
 complete -c yarn -f -n "__fish_use_subcommand" -a clean -d "cleans and removes unnecessary files from package dependencies."
 
 # Config
-complete -c yarn -f -n "__fish_use_subcommand" -a config -d ""
+complete -c yarn -f -n "__fish_use_subcommand" -a config -d "manages the yarn configuration files."
 complete -c yarn -f -n "__fish_seen_subcommand_from t config" -a "set" -d "sets the config key to a certain value."
 complete -c yarn -f -n "__fish_seen_subcommand_from t config" -a "get" -d "echoes the value for a given key to stdout."
 complete -c yarn -f -n "__fish_seen_subcommand_from t config" -a "delete" -d "deletes a given key from the config."
@@ -121,12 +121,11 @@ complete -c yarn -f -n "__fish_use_subcommand" -a remove -d "removes the package
 complete -c yarn -f -n "__fish_seen_subcommand_from t remove" -a "$INSTALLED_PACKAGES"
 
 # Run
-complete -c yarn -f -n "__fish_use_subcommand" -a run -d ""
+complete -c yarn -f -n "__fish_use_subcommand" -a run -d "runs a defined package script."
 # complete -c yarn -f -n "__fish_seen_subcommand_from t run" -a "$PACKAGE_SCRIPTS"
 
 # Outdated
-complete -c yarn -f -n "__fish_use_subcommand" -a outdated -d ""
-complete -c yarn -f -n "__fish_seen_subcommand_from t outdated" -a "integrity" -d ""
+complete -c yarn -f -n "__fish_use_subcommand" -a outdated -d "checks for outdated package dependencies."
 
 # Self-Update
 complete -c yarn -f -n "__fish_use_subcommand" -a self-update -d "updates Yarn to the latest version."
