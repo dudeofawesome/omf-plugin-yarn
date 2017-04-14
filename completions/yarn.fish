@@ -6,6 +6,8 @@
 # If your package doesn't provide any command line utility,
 # feel free to remove completions directory from the project.
 
+set INSTALLED_PACKAGES (yarn list --depth=0 --flat)
+
 # Yarn
 complete -c yarn -f -d "fast, reliable, and secure dependency management."
 
@@ -118,7 +120,7 @@ complete -c yarn -f -n "__fish_seen_subcommand_from t publish --access" -a "rest
 
 # Remove
 complete -c yarn -f -n "__fish_use_subcommand" -a remove -d "removes the package from your direct dependencies"
-complete -c yarn -f -n "__fish_seen_subcommand_from t remove" -a "$INSTALLED_PACKAGES"
+# complete -c yarn -f -n "__fish_seen_subcommand_from t remove" -a "$INSTALLED_PACKAGES"
 
 # Run
 complete -c yarn -f -n "__fish_use_subcommand" -a run -d "runs a defined package script."
